@@ -1,2 +1,3 @@
 # Calculator
-This is calculator using HTML, CSS, JS
+This is a calculator designed by using HTML, CSS, JS
+To perform Arithmatic Operations like Addition, Subraction, Multiplication, Division, Modules
