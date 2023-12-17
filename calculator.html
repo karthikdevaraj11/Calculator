@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    
+</head>
+<body>
+    <style>
+    
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: rgb(211, 76, 249);
+}
+.key{
+        display: flex;
+        
+
+    }
+input{
+         height: 100px;
+         width: 600px;
+         background-color: rgb(162, 249, 246);
+         border: none;
+         font-size: 50px
+        
+           
+    }
+table{
+    border: none;
+    width: 100%;
+    padding: 40px;
+}
+
+th, td {
+  padding: 10px;
+}
+
+button{
+    font-size: 20px;
+}
+.enter{
+
+    
+    height: 40px;
+    width: 200px;
+    
+}
+.fnx{
+    margin-left: 40px;
+    margin-top: 1px;
+    padding-left: 135px;
+    
+}
+#division{
+    height: 55px;
+    width: 60px;
+    padding: 10px;
+    margin-top: 20px;
+}
+#number1,
+#number2,
+#number3,
+#number4,
+#number5,
+#number6,
+#number7,
+#number8,
+#number9,
+#number0,
+#addition,
+#subraction,
+#multiplication{
+    padding: 15px;
+}
+#clear{
+    padding: 10px;
+    margin-top: 30px;
+   margin-left: 25px; 
+}
+#number0{
+    height: 55px;
+    width: 60px;
+    padding: 10px;
+    margin-top: 20px;
+}
+#point{
+    height: 55px;
+    width: 60px;
+    padding: 10px;
+    margin-top: 20px;
+}
+#modulo{
+    height: 55px;
+    width: 60px;
+    padding: 10px;
+    margin-top: 20px;
+}
+    
+</style>
+
+<script>
+    function clearDisplay() {
+  document.getElementById('view').value = '';
+}
+
+function display(value){
+    document.getElementById('view').value += value;
+
+}
+
+
+function calculate(){
+    
+   var a = document.getElementById('view').value;
+   var b = eval(a);
+   document.getElementById('view').value = b;
+    
+}
+</script>
+
+    <div class="container" style="background-color:gray; height: 500px; width: 500;">
+        <div class="row">
+            <div class="col">
+          <input type="text" id="view" size="number" readonly />
+          </div>
+          <div class="key">
+            <table>
+                <tr>
+                    <td><button id="number7" onclick="display('7')">7</button></td>
+                    <td><button id="number8" onclick="display('8')">8</button></td>
+                    <td><button id="number9" onclick="display('9')">9</button></td>
+                    <td><button id="multiplication" onclick="display('*')">*</button></td>
+                </tr><br/>
+                <tr>
+                    <td><button id="number4" onclick="display('4')">4</button></td>
+                    <td><button id="number5" onclick="display('5')">5</button></td>
+                    <td><button id="number6" onclick="display('6')">6</button></td>
+                    <td><button id="subraction" onclick="display('-')">-</button></td>
+                </tr><br/>
+                <tr>
+                    <td><button id="number1" onclick="display('1')">1</button></td>
+                    <td><button id="number2" onclick="display('2')">2</button></td>
+                    <td><button id="number3" onclick="display('3')">3</button></td>
+                    <td><button id="addition" onclick="display('+')">+</button></td>
+                </tr><br/>
+            </div>
+           </table>
+                     <div>
+                          <button id="clear" onclick="clearDisplay()">Clear</button><br/><br/>
+                          <button id="number0" onclick="display('0')">0</button>
+                          <button id="point" onclick="display('.')">.</button>
+                          <button id="division" onclick="display('/')">/</button>
+                          <button id="modulo" onclick="display('%')">%</button>
+                     </div>
+                      
+                     
+        </div>
+              <div class="fnx">
+                 <button class="enter"onclick="calculate()">Enter</button>
+              </div>
+        </div>
+
+    </div>
+</body>
+</html>
